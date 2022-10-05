@@ -9,13 +9,29 @@
         <button>MEET YOUR NEW BARBER</button>
       </div>
     </div>
-    <div class="services-bottom"></div>
+
+    <div class="services-bottom">
+      <div class="triangle-div"></div>
+
+      <div class="services-zone">
+        <p>MENS GROOMING</p>
+        <h2>Services</h2>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import { services } from "@/data.js";
+
 export default {
   name: "ServicesComponent",
+
+  data() {
+    return {
+      services: services,
+    };
+  },
 };
 </script>
 
@@ -34,14 +50,6 @@ export default {
     align-items: center;
     justify-content: center;
 
-    p {
-      color: #be9359;
-      font-family: Helvetica, Arial;
-      font-size: 1.05rem;
-      font-weight: bold;
-      letter-spacing: 1.8px;
-    }
-
     h2 {
       font-family: "Abril", Helvetica, Arial;
       font-size: 3.95rem;
@@ -59,16 +67,51 @@ export default {
       border: 2px solid #be9359;
     }
   }
+}
+
+.services-bottom {
+  position: relative;
+  min-height: 1200px;
+  background-color: white;
+  margin: 0 auto;
 
   .triangle-div {
-    position: absolute;
-    bottom: 0;
-    height: 0;
-    left: 0;
-    width: 0px;
-    border-left: 950px solid transparent;
-    border-right: 950px solid transparent;
-    border-bottom: 100px solid white;
+    border-bottom: 100px solid #121314 !important;
   }
+
+  .services-zone {
+    padding-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      font-family: "Abril", Helvetica, Arial;
+      font-size: 4.05rem;
+      letter-spacing: 4px;
+      color: #b1b1b1;
+      margin-top: 5px;
+    }
+  }
+}
+
+p {
+  color: #be9359;
+  font-family: Helvetica, Arial;
+  font-size: 1.05rem;
+  font-weight: bold;
+  letter-spacing: 1.8px;
+}
+
+.triangle-div {
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  left: 0;
+  width: 0px;
+  border-left: 950px solid transparent;
+  border-right: 950px solid transparent;
+  border-bottom: 100px solid white;
 }
 </style>
