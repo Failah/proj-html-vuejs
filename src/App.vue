@@ -27,4 +27,9 @@ export default {
   font-family: "Abril";
   src: local("abril"), url(./fonts/abril.ttf) format("truetype");
 }
+
+@font-face {
+  font-family: "Palanquin";
+  src: local("palanquin"), url(./fonts/Palanquin-Thin.ttf) format("truetype");
+}
 </style>

@@ -123,8 +123,9 @@ header {
 
     .under-comment {
       color: grey;
+      font-family: "Palanquin", Helvetica, Arial;
       font-size: 1.5rem;
-      font-weight: lighter;
+      letter-spacing: 0.5px;
       margin-top: 5px;
       margin-bottom: 42px;
     }
