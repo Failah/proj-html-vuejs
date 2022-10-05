@@ -2,12 +2,14 @@
   <div id="main-container">
     <ServicesComponent />
     <ProductsComponent />
+    <ReviewsAndBlogComponent />
   </div>
 </template>
 
 <script>
 import ServicesComponent from "@/components/ServicesComponent.vue";
 import ProductsComponent from "@/components/ProductsComponent.vue";
+import ReviewsAndBlogComponent from "@/components/ReviewsAndBlogComponent.vue";
 
 export default {
   name: "MainComponent",
@@ -15,6 +17,7 @@ export default {
   components: {
     ServicesComponent,
     ProductsComponent,
+    ReviewsAndBlogComponent,
   },
 };
 </script>
