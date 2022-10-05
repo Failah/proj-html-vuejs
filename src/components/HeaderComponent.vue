@@ -108,7 +108,9 @@ header {
     justify-content: center;
 
     h1 {
-      font-size: 6rem;
+      font-family: "Abril", Helvetica, Arial;
+      font-size: 5rem;
+      letter-spacing: 4px;
       color: white;
     }
 

@@ -17,4 +17,14 @@ export default {
 
 <style lang="scss">
 @import "./css/generics.scss";
+
+@font-face {
+  font-family: "Elephant";
+  src: local("elephant"), url(./fonts/elephant.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Abril";
+  src: local("abril"), url(./fonts/abril.ttf) format("truetype");
+}
 </style>
