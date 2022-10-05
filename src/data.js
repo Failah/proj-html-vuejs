@@ -14,4 +14,27 @@ export const services = [
         description: 'Tame the tangles and untidy facial hairs like a gentleman with our Beard Tidy services from Avada Barbers.',
         image: 'avadabarbers-beardtrim-icon.png',
     },
+];
+
+export const products = [
+    {
+        name: 'Brush',
+        price: '$15.00',
+        image: 'brush_dark.png',
+    },
+    {
+        name: 'Scissors',
+        price: '$15.00',
+        image: 'scissors.png',
+    },
+    {
+        name: 'Hot Oil',
+        price: '$15.00',
+        image: 'hot_oil_dark.png',
+    },
+    {
+        name: 'Straight Razor',
+        price: '$15.00',
+        image: 'straight_razor_dark.png',
+    },
 ]
