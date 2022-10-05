@@ -16,6 +16,25 @@
       <div class="services-zone">
         <p>MENS GROOMING</p>
         <h2>Services</h2>
+        <div>
+          <div v-for="service in services" :key="service.name">
+            <div>
+              <img
+                :src="require(`../assets/img/${service.image}`)"
+                :alt="service.name"
+              />
+            </div>
+            <h3>
+              {{ service.name }}
+            </h3>
+            <span>
+              {{ service.description }}
+            </span>
+          </div>
+        </div>
+      </div>
+      <div id="bottom-button">
+        <button>READ ABOUT OUR SERVICES</button>
       </div>
     </div>
   </div>
@@ -71,7 +90,7 @@ export default {
 
 .services-bottom {
   position: relative;
-  min-height: 1200px;
+  min-height: 1000px;
   background-color: white;
   margin: 0 auto;
 
@@ -80,7 +99,7 @@ export default {
   }
 
   .services-zone {
-    padding-top: 140px;
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,11 +107,62 @@ export default {
 
     h2 {
       font-family: "Abril", Helvetica, Arial;
-      font-size: 4.05rem;
-      letter-spacing: 4px;
+      font-weight: 100;
+      font-size: 4.4rem;
+      letter-spacing: 2px;
       color: #b1b1b1;
       margin-top: 5px;
+      margin-bottom: 80px;
     }
+
+    img {
+      width: 65px;
+      height: 110px;
+    }
+  }
+
+  #bottom-button {
+    text-align: center;
+    margin-top: 300px;
+
+    button {
+      width: 300px;
+      padding: 18px 20px;
+      font-size: 1.1rem;
+      background-color: rgba(0, 0, 0, 0);
+      color: #be9359;
+      border: 2px solid #be9359;
+    }
+  }
+}
+
+// area where services with their images are displayed
+.services-zone > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 100px;
+
+  div {
+    width: 300px;
+    height: 150px;
+    text-align: center;
+  }
+
+  h3 {
+    margin-bottom: 50px;
+    height: 45px;
+    color: #be9359;
+    font-family: "Abril", Helvetica, Arial;
+    font-size: 2rem;
+    font-weight: 100;
+  }
+
+  span {
+    color: #686868;
+    font-family: Helvetica, Arial;
+    font-size: 1.1rem;
+    line-height: 2rem;
   }
 }
 
@@ -104,6 +174,7 @@ p {
   letter-spacing: 1.8px;
 }
 
+// this is the triangle shaped div that separes some sections
 .triangle-div {
   position: absolute;
   bottom: 0;
@@ -113,5 +184,9 @@ p {
   border-left: 950px solid transparent;
   border-right: 950px solid transparent;
   border-bottom: 100px solid white;
+}
+
+.services-zone div div:nth-child(2) img {
+  width: 85px;
 }
 </style>
