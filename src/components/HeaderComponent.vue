@@ -1,5 +1,6 @@
 <template>
   <header>
+    <!-- this are the 2 icons at the top right of the screen in the header -->
     <div id="right-outside-icons">
       <div>
         <img src="../assets/img/header-demos.png" alt="Demo" />
@@ -8,17 +9,36 @@
         <img src="../assets/img/header-onsale.png" alt="" />
       </div>
     </div>
+
+    <!-- the top navbar with hamburger menu (openable) -->
     <div id="header-container">
       <div class="top-navbar">
         <div>
           <img src="../assets/img/avadabarbers-logo-x1.png" alt="Avada Logo" />
         </div>
         <div>
-          <i class="fa-solid fa-cart-shopping"></i>
-          <i class="fa-solid fa-bars"></i>
+          <a href="#top-half-footer"
+            ><i class="fa-solid fa-cart-shopping"></i
+          ></a>
+          <div class="header-navbar">
+            <i @click="toggleSearchInput" class="fa-solid fa-bars"></i>
+            <div
+              id="toggle-menu"
+              :class="{ toggle: toggleIndex === true }"
+              class="input"
+            >
+              <!-- nav links in the page -->
+              <nav v-if="toggleIndex === true">
+                <a href="#services-container">Services</a>
+                <a href="#top-half-products">Products</a>
+                <a href="#reviews-section">Reviews</a>
+              </nav>
+            </div>
+          </div>
         </div>
       </div>
 
+      <!-- this is the entire header section -->
       <div class="center-header">
         <div>
           <h1>Barber Shop</h1>
@@ -40,6 +60,19 @@
 <script>
 export default {
   name: "HeaderComponent",
+
+  data() {
+    return {
+      toggleIndex: false,
+    };
+  },
+
+  methods: {
+    toggleSearchInput() {
+      console.log("search input clicked");
+      this.toggleIndex = !this.toggleIndex;
+    },
+  },
 };
 </script>
 
@@ -65,12 +98,23 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
+
+      &:hover {
+        filter: brightness(150%);
+        cursor: pointer;
+      }
     }
   }
 
   #header-container {
     max-width: 1150px;
     margin: 0 auto;
+
+    .top-navbar > div:nth-child(2) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
     .top-navbar {
       width: 100%;
@@ -88,8 +132,62 @@ header {
         }
 
         &.fa-bars {
-          font-size: 1.6rem;
           padding-right: 10px;
+        }
+
+        &:hover {
+          transition: color 0.3s linear;
+          color: #686868;
+        }
+      }
+
+      .header-navbar {
+        right: 15px;
+        position: relative;
+        display: inline-block;
+
+        nav {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          column-gap: 20px;
+
+          a {
+            text-decoration: none;
+            color: white;
+            font-family: "Abril", Helvetica, Arial;
+            font-size: 1.1rem;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+
+        #toggle-menu {
+          width: 0px;
+          height: 34px;
+          box-shadow: none;
+          border: 1px solid transparent;
+          outline: none;
+          padding-left: 35px;
+          font-size: 16px;
+          transition: 0.3s ease all;
+
+          &.toggle {
+            width: 280px;
+          }
+        }
+
+        i {
+          width: 18px;
+          left: 8px;
+          top: 50%;
+          transform: translateY(-50%);
+          position: absolute;
+          cursor: pointer;
+          font-size: 1.9rem;
         }
       }
     }
@@ -109,6 +207,7 @@ header {
 
     h1 {
       font-family: "Abril", Helvetica, Arial;
+      font-weight: 100;
       font-size: 5rem;
       letter-spacing: 4px;
       color: white;
@@ -122,7 +221,7 @@ header {
     }
 
     .under-comment {
-      color: grey;
+      color: #686868;
       font-family: "Palanquin", Helvetica, Arial;
       font-size: 1.5rem;
       letter-spacing: 0.5px;
@@ -137,6 +236,12 @@ header {
       background-color: rgba(0, 0, 0, 0);
       color: #be9359;
       border: 2px solid #be9359;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+        filter: brightness(130%);
+      }
     }
   }
 
