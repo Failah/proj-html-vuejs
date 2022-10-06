@@ -42,7 +42,18 @@
       </div>
     </div>
 
-    <div id="bottom-half-footer"></div>
+    <!-- this is the most bottom part of the footer with the button that brings the page all the way up -->
+    <div id="bottom-half-footer">
+      <div>
+        <i class="fa-regular fa-copyright"></i> Copyright 2012-2022 | Avada
+        Theme by ThemeFusion | All Rights Reserved | Powered by Failah
+      </div>
+      <div id="go-to-top-button">
+        <a href="#header-container">
+          <i class="fa-solid fa-chevron-up"></i>
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -62,6 +73,7 @@ export default {
   padding-top: 58px;
   padding-bottom: 75px;
 
+  // used to resize only the lateral images and not the central Avada logo
   .resize-img {
     width: 360px;
   }
@@ -109,5 +121,42 @@ export default {
 #bottom-half-footer {
   min-height: 120px;
   background-color: #161718;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  #go-to-top-button {
+    width: 48px;
+    height: 32px;
+    border-radius: 4px 4px 0px 0px;
+    background-color: #303030;
+    position: absolute;
+    bottom: 0;
+    right: 4%;
+    cursor: pointer;
+
+    a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    i {
+      color: white;
+      padding-top: 6px;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+#bottom-half-footer > div:first-child {
+  color: #282829;
+  font-family: Helvetica, Arial;
+  font-size: 1rem;
+  font-weight: bold;
 }
 </style>

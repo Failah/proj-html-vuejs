@@ -38,4 +38,8 @@ export default {
   font-family: "Palanquin";
   src: local("palanquin"), url(./fonts/Palanquin-Thin.ttf) format("truetype");
 }
+
+* {
+  scroll-behavior: smooth;
+}
 </style>
