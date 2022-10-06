@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- this is the top half of the footer with the shop and the agency infos -->
     <div id="top-half-footer">
       <div>
         <div>
@@ -23,6 +24,7 @@
           <div>+1 (555) 555-1212</div>
         </div>
         <p>FOLLOW US</p>
+        <!-- social icons zone -->
         <div class="social-icons">
           <i class="fa-brands fa-facebook-f"></i>
           <i class="fa-brands fa-twitter"></i>
@@ -108,13 +110,26 @@ export default {
     color: #be9359;
     border: 2px solid #be9359;
     margin-top: 18px;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.02);
+      filter: brightness(130%);
+    }
   }
 
   .social-icons {
     color: white;
     display: flex;
     justify-content: center;
-    column-gap: 10px;
+    column-gap: 20px;
+
+    i {
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.08);
+      }
+    }
   }
 }
 
@@ -149,6 +164,12 @@ export default {
       color: white;
       padding-top: 6px;
       font-size: 0.9rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.02);
+      filter: brightness(130%);
     }
   }
 }

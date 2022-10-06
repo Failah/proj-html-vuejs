@@ -125,6 +125,12 @@ export default {
     background-color: rgba(0, 0, 0, 0);
     color: #be9359;
     border: 2px solid #be9359;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.02);
+      filter: brightness(130%);
+    }
   }
 }
 
@@ -200,6 +206,12 @@ export default {
     background-color: rgba(0, 0, 0, 0);
     color: #be9359;
     border: 2px solid #be9359;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.02);
+      filter: brightness(130%);
+    }
   }
 }
 </style>

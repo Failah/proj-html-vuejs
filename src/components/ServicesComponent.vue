@@ -1,8 +1,10 @@
 <template>
   <div id="services-container">
     <div class="services-top">
+      <!-- this is the triangle shaped div that separats the sections -->
       <div class="triangle-div"></div>
 
+      <!-- this is the top half (the dark background one) where the award is called -->
       <div class="award-zone">
         <p>AWARD WINNING</p>
         <h2>Pro Barbers</h2>
@@ -11,8 +13,10 @@
     </div>
 
     <div class="services-bottom">
+      <!-- this is the triangle shaped div that separats the sections -->
       <div class="triangle-div"></div>
 
+      <!-- this is the section where all the services are displayed dinamically (array in data.js) -->
       <div class="services-zone">
         <p>MENS GROOMING</p>
         <h2>Services</h2>
@@ -84,6 +88,12 @@ export default {
       background-color: rgba(0, 0, 0, 0);
       color: #be9359;
       border: 2px solid #be9359;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+        filter: brightness(130%);
+      }
     }
   }
 }
@@ -94,6 +104,7 @@ export default {
   background-color: white;
   margin: 0 auto;
 
+  // this is the triangle shaped div that separats the sections
   .triangle-div {
     border-bottom: 100px solid #121314 !important;
   }
@@ -132,6 +143,12 @@ export default {
       background-color: rgba(0, 0, 0, 0);
       color: #be9359;
       border: 2px solid #be9359;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+        filter: brightness(130%);
+      }
     }
   }
 }

@@ -1,6 +1,7 @@
 <template>
   <div>
     <div id="reviews-section">
+      <!-- this is the top half with all the reviews displayed non-dinamically via js but typed manually in the html -->
       <p>WHAT PEOPLE SAY</p>
       <h2>Reviews</h2>
       <div class="reviews-container">
@@ -46,6 +47,8 @@
     <div id="blog-section">
       <!-- this is the triangle shaped div that separes some sections -->
       <div class="triangle-down"></div>
+
+      <!-- this is the bottom half part of the section with the blogs -->
       <p>TALES FROM THE BARBER SHOP</p>
       <h2>Recent Blog Posts</h2>
       <div id="blog-post-container">
@@ -225,6 +228,12 @@ export default {
     background-color: rgba(0, 0, 0, 0);
     color: #be9359;
     border: 2px solid #be9359;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.02);
+      filter: brightness(130%);
+    }
   }
 }
 </style>
